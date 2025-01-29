@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base:: parent(~{:: #content} , ~{::title} , ~{:: script})}">
+<head>
+    <title th:text="${loggedInUser.name}">Document</title>
+</head>
+<body >
+     <div id="content">
+
+         <!-- if user is logged in sidebar  -->
+    <div th:if="${loggedInUser} ">
+        <div th:replace="~{user/sidebar :: sidebar}"></div>
+    </div>
+
+      <div  class="pt-20 sm:pl-64 " style="height: 1000px" > 
+        <h1>This is dashboard  page </h1>
+      </div>
+    </div>
+    <script>
+        console.log("hello");
+    </script>
+    <!-- flowbite content -->
+     
+</body>
+</html>
